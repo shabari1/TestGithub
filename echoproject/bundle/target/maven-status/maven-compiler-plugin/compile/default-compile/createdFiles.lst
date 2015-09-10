@@ -1,0 +1,4 @@
+com\aem\community\impl\HelloServiceImpl.class
+com\aem\community\impl\filters\LoggingFilter.class
+com\aem\community\HelloService.class
+com\aem\community\package-info.class
