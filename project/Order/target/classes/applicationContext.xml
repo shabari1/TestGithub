@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<beans
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsdx http://www.springframework.org/schema/integration/file http://www.springframework.org/schema/integration/file/spring-integration-file.xsd http://www.springframework.org/schema/integration/ftp http://www.springframework.org/schema/integration/ftp/spring-integration-ftp.xsd http://www.springframework.org/schema/integration/sftp http://www.springframework.org/schema/integration/sftp/spring-integration-sftp.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/integration/stream http://www.springframework.org/schema/integration/stream/spring-integration-stream.xsd"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:int-stream="http://www.springframework.org/schema/integration/stream"
+	xmlns:int-sftp="http://www.springframework.org/schema/integration/sftp"
+	xmlns:int-ftp="http://www.springframework.org/schema/integration/ftp"
+	xmlns:file="http://www.springframework.org/schema/integration/file"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+	
+	<!-- <bean id="dbConnection" class="com.abc.spring.integration.dao.DBConnectionImpl" /> -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.apache.derby.jdbc.ClientDriver" />
+		<property name="url" value="jdbc:derby://localhost:1527/sample" />
+		<property name="username" value="app" />
+		<property name="password" value="app" />
+	</bean>
+	
+	<!--  Below declaration is required when running test class -->
+	<!--  
+	<bean class="com.abc.spring.integration.service.FileRouter" id="fileRouter" />
+	<bean class="com.abc.spring.integration.dao.dataaccess.AuditBatchService" id="auditBatchService" />
+	<bean class="com.abc.spring.integration.dao.dataaccess.EIPDataSetService" id="eIPDataSetService" />
+	<bean class="com.abc.spring.integration.dao.dataaccess.FileInputService" id="fileInputService" />		
+	<bean class="com.abc.spring.integration.dao.dataaccess.FileReadService" id="FileReadService" />
+	<bean class="com.abc.spring.integration.dao.dataaccess.FilesWriteOutService" id="FilesWriteOutService" />
+	<bean class="com.abc.spring.integration.dao.dataaccess.FileValidationService" id="FileValidationService" />
+	<bean class="com.abc.spring.integration.dao.dataaccess.FileWriteService" id="FileWriteService" />		
+	<bean class="com.abc.spring.integration.dao.dataaccess.InputFileRoleService" id="inputFileRoleService" />
+	<bean class="com.abc.spring.integration.dao.dataaccess.InputFileService" id="inputFileService" />
+	<bean class="com.abc.spring.integration.dao.dataaccess.MessageRetrievalService" id="messageRetrievalService" />
+	<bean class="com.abc.spring.integration.dao.dataaccess.MessageService" id="messageService" />
+	<bean class="com.abc.spring.integration.dao.dataaccess.OrgRoleFundService" id="orgRoleFundService" />	
+	<bean class="com.abc.spring.integration.dao.dataaccess.OutputFileService" id="outputFileService" />
+	 -->
+	<!-- <bean class="com.abc.spring.integration.dao.dataaccess.FileInputService"
+		id="fileInputService" />
+	<bean class="com.abc.spring.integration.dao.dataaccess.FileInputService"
+		id="fileInputService" /> -->
+</beans>
